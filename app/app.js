@@ -1,7 +1,3 @@
-"use strict";
-
-var app = angular.module("bangaclient", ["ngRoute"]);
-
 // Create main Angular module
 var app = angular.module('BangaClient', ['ngRoute'])
             .constant('apiUrl', "http://localhost:8000");
@@ -10,15 +6,19 @@ angular.module('BangaClient').config(
 [
   '$interpolateProvider',
   '$routeProvider',
-  function($interpolateProvider, $routeProvider) {
+  '$httpProvider',
+  function($interpolateProvider, $routeProvider, $httpProvider) {
 
     $interpolateProvider.startSymbol('((');
     $interpolateProvider.endSymbol('))');
 
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+
     $routeProvider
       .when('/', {
         controller: 'AuthController',
-        templateUrl: 'bangaclient/partials/auth/login.html'
+        templateUrl: 'partials/partial.login.html'
       })
       .when('/products', {
         controller: 'ProductController',
@@ -27,7 +27,12 @@ angular.module('BangaClient').config(
       .when('/types', {
         controller: 'ProductTypesController',
         templateUrl: 'bangaclient/partials/products/producttypes.html'
+      })
+      .when('/register', {
+        controller: 'AuthController',
+        templateUrl: 'partials/partial.register.html'
       });
+
   }
 ]);
 
