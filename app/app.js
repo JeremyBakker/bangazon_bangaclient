@@ -22,7 +22,7 @@ angular.module('BangaClient').config(
       })
       .when('/products', {
         controller: 'ProductController',
-        templateUrl: 'bangaclient/partials/products/products.html'
+        templateUrl: 'partials/partial.products.html'
       })
       .when('/types', {
         controller: 'ProductTypesController',

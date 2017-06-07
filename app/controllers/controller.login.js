@@ -22,7 +22,10 @@ function($scope, $http, $location, RootFactory, apiUrl) {
         }
       }).then(
         res => {
-          // What comes back upon registration?
+          RootFactory.setToken(res.data.token);
+          if (res.data.token !== "") {
+            $location.path('/products');
+          }
         },
         console.error
       );
