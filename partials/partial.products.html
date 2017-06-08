@@ -1,8 +1,12 @@
-<h1>Products!</h1>
+<h1 style="text-align: center">Available Products</h1>
 
-<div>
-    <div ng-repeat="product in products">
-        <a href="/product_detail/">((product.title)): $((product.price))</a>
-        <span class="metadata">((product.product_type.label))</span>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 row-eq-height" style="border:solid 1px black; display: inline-block; overflow: hidden" style="height: 100%" ng-repeat="product in products">
+            <img class="center-block" src="../images/potato.png" alt="Product Image" height=103px width=100px style="margin: 5px auto">
+            <h4 style="text-align: center"><a href="#!/product_detail/((product.id))">((product.title))</a></h4>
+            <p class="card-text" style="text-align: center">((product.description))</p>
+            <p class="card-text" style="text-align: center">$((product.price))</p>
+        </div>
     </div>
 </div>

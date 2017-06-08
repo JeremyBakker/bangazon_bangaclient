@@ -1,8 +1,11 @@
-<h1>Product Detail!</h1>
+<h1>Product Detail</h1>
 
-<div>
-    <div>
-        ((product.title)): $((product.price))</a>
-        <span class="metadata">((product.product_type.label))</span>
+<div class="row">
+    <div style="border:solid 1px black; margin: 5px" class="col-md-6 col-md-offset-3">
+        <img class="center-block" src="../images/potato.png" alt="Product Image" height=103px width=100px style="margin: 5px auto">
+        <h4 style="text-align: center"><a href="#!/product_detail/((product.id))">((product.title))</a></h4>
+        <p class="card-text" style="text-align: center">((product.description))</p>
+        <p class="card-text" style="text-align: center">$((product.price))</p>
+        <a href="#" class="btn btn-primary" style="margin-bottom: 5px" >Add to Shopping Cart</a>
     </div>
 </div>

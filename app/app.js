@@ -31,6 +31,10 @@ angular.module('BangaClient').config(
       .when('/register', {
         controller: 'AuthController',
         templateUrl: 'partials/partial.register.html'
+      })
+      .when('/product_detail/:id',{
+        controller: 'ProductDetailController',
+        templateUrl: 'partials/partial.product_detail.html'
       });
 
   }
