@@ -11,16 +11,17 @@ angular.module('BangaClient').controller('ProductTypesController', [
         root => 
           $http({
             method: "GET",
-            url: `${root.product_types}`,
+            url: `${root.product_type}`,
             headers: {
               'Authorization': "Token " + RootFactory.getToken()
             }
           })
           .then(
-            res => $scope.product_types = res.data.results,
-            console.log
-          )
-        ,console.log
+            res => {$scope.product_types = res.data.results;
+            console.log("$scope.product_types", $scope.product_types);},
+            err => console.log
+          ),
+        err => console.log
       );
   }
 ]);

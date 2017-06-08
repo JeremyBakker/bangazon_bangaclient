@@ -16,10 +16,12 @@ angular.module('BangaClient').controller('ProductController', [
             }
           })
           .then(
-            res => $scope.products = res.data.results,
+            res => {$scope.products = res.data.results;
+            console.log("$scope.products", $scope.products);},
             err => console.log
-          )
-        ,err => console.log
+          ),
+        err => console.log
       );
+
   }
 ]);

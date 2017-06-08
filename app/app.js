@@ -24,9 +24,9 @@ angular.module('BangaClient').config(
         controller: 'ProductController',
         templateUrl: 'partials/partial.products.html'
       })
-      .when('/types', {
+      .when('/product_types', {
         controller: 'ProductTypesController',
-        templateUrl: 'bangaclient/partials/products/producttypes.html'
+        templateUrl: 'partials/partial.product_types.html'
       })
       .when('/register', {
         controller: 'AuthController',

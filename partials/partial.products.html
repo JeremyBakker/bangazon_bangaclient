@@ -2,7 +2,7 @@
 
 <div>
     <div ng-repeat="product in products">
-        ((product.title)): $((product.price))
-        <span class="metadata">((product.producttype.title))</span>
+        <a href="/product_detail/">((product.title)): $((product.price))</a>
+        <span class="metadata">((product.product_type.label))</span>
     </div>
 </div>

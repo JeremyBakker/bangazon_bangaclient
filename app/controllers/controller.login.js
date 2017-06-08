@@ -4,6 +4,7 @@ angular.module('BangaClient').controller('AuthController', [
   '$location',
   'RootFactory',
   'apiUrl',
+
 function($scope, $http, $location, RootFactory, apiUrl) {
 
   $scope.register = function() {
@@ -32,6 +33,11 @@ function($scope, $http, $location, RootFactory, apiUrl) {
   };
 
 
+  $scope.user = {
+    username: "jbakker",
+    password: "password"
+  }
+
   $scope.login = function() {
       $http({
         url: `${apiUrl}/api-token-auth/`,
@@ -51,4 +57,5 @@ function($scope, $http, $location, RootFactory, apiUrl) {
       );
   };
 
+  $scope.login();
 }]);
