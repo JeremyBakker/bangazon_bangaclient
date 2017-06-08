@@ -14,7 +14,7 @@ You will learn how to use the built-in authentication and authorization modules 
 
 ### Requirements
 
-We need to build a mobile-response, single page application for use on mobile devices. This project will eventually be used as the prototype for an Ionic application. You are not responsible for that migration.
+We need to build a mobile-responsive, single-page application for use on mobile devices. This project will eventually be used as the prototype for an Ionic application. You are not responsible for that migration.
 
 #### Story
 
